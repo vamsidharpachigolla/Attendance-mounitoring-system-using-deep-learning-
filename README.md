@@ -59,8 +59,7 @@ Clone the Repo
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/attendance-monitoring-deep-learning.git
-cd attendance-monitoring-deep-learning
+ attendance-monitoring-deep-learning
 Run the Project
 bash
 Copy
