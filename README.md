@@ -22,9 +22,6 @@ Libraries/Frameworks:
 
 OpenCV
 
-TensorFlow / Keras / PyTorch
-
-NumPy, Pandas
 
 dlib / face_recognition (optional for faster prototyping)
 
