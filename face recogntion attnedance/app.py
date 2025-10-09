@@ -17,9 +17,7 @@ imgBackground=cv2.imread("background.png")
 datetoday = date.today().strftime("%m_%d_%y")
 datetoday2 = date.today().strftime("%d-%B-%Y")
 
-
 face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
 
 if not os.path.isdir('Attendance'):
     os.makedirs('Attendance')
@@ -45,7 +43,6 @@ def extract_faces(img):
 def identify_face(facearray):
     model = joblib.load('static/face_recognition_model.pkl')
     return model.predict(facearray)
-
 
 def train_model():
     faces = []
@@ -93,7 +90,6 @@ def getallusers():
 
     return userlist, names, rolls, l
 
-
 @app.route('/')
 def home():
     names, rolls, times, l = extract_attendance()
@@ -130,8 +126,6 @@ def start():
     cv2.destroyAllWindows()
     names, rolls, times, l = extract_attendance()
     return render_template('home.html', names=names, rolls=rolls, times=times, l=l, totalreg=totalreg(), datetoday2=datetoday2)
-
-
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
